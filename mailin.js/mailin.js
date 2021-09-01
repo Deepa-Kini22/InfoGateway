@@ -13,7 +13,7 @@ Mailin = rest.service(function (base_url, api_key, timeout) {
         this.timeout = this.timeout != null ? this.timeout : 30000; //default timeout: 30 secs
         if (this.timeout != null && (this.timeout <= 0 || this.timeout > 60000))
             throw new Error('value not allowed for timeout')
-
+        // will call back  Ok
         // Make the call
         return this.request(called_url, { method: method, timeout: this.timeout, headers: { 'api-key': this.api_key, "content-type": content_type }, data: input });
     },
